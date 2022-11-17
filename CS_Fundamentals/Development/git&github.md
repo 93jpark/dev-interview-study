@@ -291,5 +291,5 @@ git clone: 저장소 가져오기(다운받기)
 
 ​
 
-출처: [naver] 면접 준비 | Git & GitHub (velog.io) // [CS study] git / github / git 명령어 (velog.io) / [Git] 실무에서 사용하는 명령어들을 빠르게 알아보자 (1) (velog.io) / Git (git-scm.com) / Getting Started (githubtraining.github.io) / VCS(Version Control System) - Subversion(svn), Git 특징 및 용어 정리 (tistory.com) / https://pasudo123.tistory.com/287 / https://www.git-tower.com
+출처: [naver] 면접 준비 | Git & GitHub (velog.io) / [CS study] git / github / git 명령어 (velog.io) / [Git] 실무에서 사용하는 명령어들을 빠르게 알아보자 (1) (velog.io) / Git (git-scm.com) / Getting Started (githubtraining.github.io) / VCS(Version Control System) - Subversion(svn), Git 특징 및 용어 정리 (tistory.com) / https://pasudo123.tistory.com/287 / https://www.git-tower.com
 
