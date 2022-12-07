@@ -27,7 +27,7 @@
 주소창에 URL입력하고 엔터키를 누르면, URL의 호스트 이름이 DNS(도메인 네임 서비스)를 통해 진짜 주소인 IP주소로 변환되고, 이 IP 주소를 갖는 서버에게 요청을 보낸다. 
 
 **URI 구조**
-<Center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbhMA8N%2Fbtry4f4Jv63%2FMCmJqvqqEMp4U9MYE5U3f0%2Fimg.png" width="400" height="100">
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbhMA8N%2Fbtry4f4Jv63%2FMCmJqvqqEMp4U9MYE5U3f0%2Fimg.png" width="600" height="150"></p>
 
 <br></br>
 
