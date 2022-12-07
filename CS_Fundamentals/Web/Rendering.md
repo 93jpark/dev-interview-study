@@ -64,14 +64,14 @@
 
 CSSOM을 생성하고 나면, 파싱이 중단된 지점부터 다시 HTML 파일은 파싱하기 시작해 DOM생성을 재개한다. 조금 다른 점은 CSS의 상속을 반영하여 생성된다.
 
- <center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdf1gLS%2Fbtry4gCALFm%2FiSKf1mkVTPH04K02o0YAA0%2Fimg.png"  width="400" height="200"></center>
+ <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdf1gLS%2Fbtry4gCALFm%2FiSKf1mkVTPH04K02o0YAA0%2Fimg.png"  width="600" height="300">
 
 ## 2-3.렌더 트리 생성 
 
 DOM과 CSSOM은 굉장히 비슷하게 생겼지만, 서로 다른 속성들을 가진 독립적인 트리들이다. HTML은 구조를, CSS는 디자인을 담당하기 때문에 둘을 합치는 작업이 필요하다. 
 
 렌더 트리는 렌더링을 목적으로 만드는 트리로, 브라우저가 사용자에게 보여주기 위한 화면을 그리기 위한 과정으로, 보이지 않을 요소들은 이 트리에 포함하지 않는다. DOM과 CSSOM은 렌더링을 위해 렌더 트리로 결합된다.  
-<center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdpJAcH%2Fbtry7r4olZc%2FrCgtlnvK2UjosAEUpR0Nq1%2Fimg.png"  width="400" height="200" ></center>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdpJAcH%2Fbtry7r4olZc%2FrCgtlnvK2UjosAEUpR0Nq1%2Fimg.png"  width="600" height="300" >
 
 
 렌더 트리는 아직까지 텍스트로 구성된 객체로밖에 보이지 않는다. 실제로 우리가 보는 페이지를 만들기 위해서는 페인팅 작업을 거쳐야한다. 
