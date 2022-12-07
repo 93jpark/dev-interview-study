@@ -3,6 +3,7 @@
 
 * 파싱(parsing): 프로그래밍 언어로 작성된 파일을 실행시키기 위해 구문 분석을(syntax analysis)을 하는 단계이다. 파일의 문자열들을 문법적 의미를 갖는 최소 단위인 토큰으로 분해하고, 이 토큰들을 문법적 의미와 구조에 따라 노드라는 요소로 만든다. 노드들은 상하관계를 반영해 트리를 형성하는데, 이 트리를 파스트리라고 한다.
 
+<br></br>
 ## 렌더링(rendering)
 
 **HTML, CSS, JavaScript 파일을 파싱해, 브라우저에 시각적으로 출력하는 과정**
@@ -23,14 +24,14 @@
 >step1. 브라우저는 HTML, CSS, JS, 이미지, 폰트 등 리소스를 서버에 요청하고, 응답으로 받아온다.
 
 서버에 요청은 어떻게 전송할까? 브라우저에 있는 **주소창**이 그 역할을 한다. 
-
 주소창에 URL입력하고 엔터키를 누르면, URL의 호스트 이름이 DNS(도메인 네임 서비스)를 통해 진짜 주소인 IP주소로 변환되고, 이 IP 주소를 갖는 서버에게 요청을 보낸다. 
 
 **URI 구조**
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbhMA8N%2Fbtry4f4Jv63%2FMCmJqvqqEMp4U9MYE5U3f0%2Fimg.png)
+<Center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbhMA8N%2Fbtry4f4Jv63%2FMCmJqvqqEMp4U9MYE5U3f0%2Fimg.png" width="400" height="100">
 
+<br></br>
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKg2J5%2Fbtry8y9PjAd%2FsX4LXaJJ5T8GRhNh5leKw0%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKg2J5%2Fbtry8y9PjAd%2FsX4LXaJJ5T8GRhNh5leKw0%2Fimg.png"  width="400" height="180"></center>
 
 서버는 기본적으로 보통 index.html을 응답으로 주도록 설정되어 있다.  예를들어, 우리가 https://www.google.com 을 검색하면, 
 사실은 https://www.google.com/index.html 을 요청하는 것과 다름 없다. 이 요청에 대해 구글 서버는 클라이언트에 index.html 파일을 전달해줄 것이다. 다른 파일을 요청하고싶다면 뒤에 다른 파일 경로를 적거나, Javascript를 통해서 동적으로 요청할 수도 있다. 요청과 응답은 개발자 도구 Network 패널에서 확인할 수 있다.
@@ -53,7 +54,7 @@
 5. DOM : **HTML문서의 요소들의 중첩관계**를 기반으로 노드들을 **트리 구조**로 구성한다. 이 트리를 **DOM(Document Object Model)** 이라고 한다.
 (말 그대로 문서를 객체로 바꾼 모델을 의미)
 
-   ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fd752eh%2Fbtry8y211Yn%2FjXqSArXalZzp1tpeg9Vee0%2Fimg.png)
+  <center><img src ="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fd752eh%2Fbtry8y211Yn%2FjXqSArXalZzp1tpeg9Vee0%2Fimg.png" width="400" height="200"></center>
 
 ## 2-2. CSS 파싱, CSSOM 생성
 
@@ -63,15 +64,14 @@
 
 CSSOM을 생성하고 나면, 파싱이 중단된 지점부터 다시 HTML 파일은 파싱하기 시작해 DOM생성을 재개한다. 조금 다른 점은 CSS의 상속을 반영하여 생성된다.
 
-   ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdf1gLS%2Fbtry4gCALFm%2FiSKf1mkVTPH04K02o0YAA0%2Fimg.png)
+ <center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdf1gLS%2Fbtry4gCALFm%2FiSKf1mkVTPH04K02o0YAA0%2Fimg.png"  width="400" height="200"></center>
 
 ## 2-3.렌더 트리 생성 
 
 DOM과 CSSOM은 굉장히 비슷하게 생겼지만, 서로 다른 속성들을 가진 독립적인 트리들이다. HTML은 구조를, CSS는 디자인을 담당하기 때문에 둘을 합치는 작업이 필요하다. 
 
 렌더 트리는 렌더링을 목적으로 만드는 트리로, 브라우저가 사용자에게 보여주기 위한 화면을 그리기 위한 과정으로, 보이지 않을 요소들은 이 트리에 포함하지 않는다. DOM과 CSSOM은 렌더링을 위해 렌더 트리로 결합된다.  
-
-   ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdpJAcH%2Fbtry7r4olZc%2FrCgtlnvK2UjosAEUpR0Nq1%2Fimg.png)
+<center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdpJAcH%2Fbtry7r4olZc%2FrCgtlnvK2UjosAEUpR0Nq1%2Fimg.png"  width="400" height="200" ></center>
 
 
 렌더 트리는 아직까지 텍스트로 구성된 객체로밖에 보이지 않는다. 실제로 우리가 보는 페이지를 만들기 위해서는 페인팅 작업을 거쳐야한다. 
@@ -86,7 +86,7 @@ JS엔진은 js파일의 코드를 파싱해서 컴퓨터가 이해할 수 있는
 >LHS(left hand side): 다른 변수값을 지정하여 저장할 변수
 >RHS(right hand side): 다른 변수에 저장될 변수값에 해당하는 변수
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FchkIMn%2Fbtry8izp0Wz%2F4TsRT9TO6Unf8XIUxKhzE0%2Fimg.png)
+<center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FchkIMn%2Fbtry8izp0Wz%2F4TsRT9TO6Unf8XIUxKhzE0%2Fimg.png"  width="400" height="200"></center>
 
 ## 4.레이아웃(리플로우)
 >step4. 렌더트리를 기반으로 HTML 요소의 레이아웃(위치, 크기)을 계산한다. 
@@ -98,12 +98,13 @@ JS엔진은 js파일의 코드를 파싱해서 컴퓨터가 이해할 수 있는
 >step5. 화면에 HTML요소를 페인팅한다. 
 
 화면에 색상을 입히고, **어떤 요소를 보여주기 위해서는 이 픽셀에 대한 정보가 있어야 한다.** 페인팅은 이러한 픽셀들을 채워나가는 과정이다. 
-
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbriyci%2Fbtry66TJNy6%2FSUVzSATWwqK0kruOy55SFK%2Fimg.png)
+<center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbriyci%2Fbtry66TJNy6%2FSUVzSATWwqK0kruOy55SFK%2Fimg.png"  width="400" height="200"></center>
 
 * 리플로우: 레이아웃 다시 계산하는것.
 * 리페인팅: 새로운 렌더트리를 바탕으로 다시 페인트를 하는 것
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbq8I4z%2Fbtry7vsvVpZ%2F1eRxOyArCa7djYsVtuzNt1%2Fimg.png)
+<center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbq8I4z%2Fbtry7vsvVpZ%2F1eRxOyArCa7djYsVtuzNt1%2Fimg.png" ></center>
+
+<br></br>
 
 ## script 태그의 async/defer 어트리뷰트
 
